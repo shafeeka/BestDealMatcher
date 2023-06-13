@@ -31,11 +31,11 @@
   <header id="header" class="fixed-top">
     <div class="container-fluid d-flex">
       <div class="logo mr-auto">
-        <h1 class="text-light"><a href="index.html"><span>BestDeal</span></a></h1>
+        <h1 class="text-light"><a href="index.html"><span>CitiBestDeals</span></a></h1>
       </div>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-            <li class="get-started"><a href="https://drive.google.com/file/d/1fqZh5HQN1f0yg5U0XxFNluwQ7YHKQfrw/view?usp=sharing" target="_blank">User Guide</a></li>
+            <li class="get-started"><a href="https://drive.google.com/file/d/1fqZh5HQN1f0yg5U0XxFNluwQ7YHKQfrw/view?usp=sharing" target="_blank"></a></li>
             <!-- Need to change link -->
         </ul>
       </nav>
@@ -49,13 +49,58 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
-          <h1>Customer Risk Assessment Model</h1>
+          <h1>Please Log In Here</h1>
+
+          <form action="/login" method="POST">
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form2Example1">Email address</label>
+              <input type="email" id="form2Example1" class="form-control" placeholder="Enter email" name="username"/>
+            </div>
+          
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form2Example2">Password</label>
+              <input type="password" id="form2Example2" class="form-control" placeholder="Enter password" name='password'/>
+            </div>
+          
+            <!-- 2 column grid layout for inline styling -->
+            <div class="row mb-4">
+              <div class="col d-flex justify-content-center">
+                <!-- Checkbox -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                  <label class="form-check-label" for="form2Example31"> Remember me </label>
+                </div>
+              </div>
+          
+              <div class="col">
+                <!-- Simple link -->
+                <a href="#!">Forgot password?</a>
+              </div>
+            </div>
+          
+            <!-- Submit button -->
+           <button type="button" onclick="navigate()" class="btn btn-primary btn-block mb-4">Sign in</button> 
+
+            <script>
+              function navigate() {
+                window.location.href="home";
+              }
+            </script>
+          
+            <!-- Register buttons -->
+            <div class="text-center">
+              <p>Not a member? <a href="#!">Register</a></p>
+            </div>
+          </form>
+<!-- 
           <h2>Upload Training File here</h2>
           <form action="/features_importance", method="post" enctype = "multipart/form-data">
             <input type = "file" name = "train_file" class="upload_train">
             <br><br><br>
             <input type="submit" value="Get Feature Importance" class="btn get_summ_results">
-          </form>
+          </form> -->
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img">
           <img src="../static/assets/img/hero-img.svg" class="img-fluid animated" alt="">
@@ -66,7 +111,7 @@
   </section><!-- End Hero -->
   <section id="footer" class="d-flex align-items-center">
     <div class="footer">
-      Darren Png, Neo Jia Ying, Nor Aisyah, Tay Yu Liang, Wong Wei Ling, Yeo Hui Xin
+      APAC-SG-4 - Jamie, Jia Ying, Shafeeka, Yin Wee
     </div>
   </section>
 

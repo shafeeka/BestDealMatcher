@@ -35,7 +35,7 @@
       </div>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-            <li class="get-started"><a href="getstarted" target="_blank">Sign Out</a></li>
+            <li class="get-started"><a href="signin" target="_blank">Sign In Here</a></li>
             <!-- Need to change link -->
         </ul>
       </nav>
@@ -48,45 +48,13 @@
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
       <div class="row">
-        <div class="col-lg-10 pt-5 pt-lg-0 order-2 order-lg-1">
-          <h1>Welcome Back</h1>
-          <!-- <h2>Upload Training File here</h2> -->
-          <form action="/features_importance", method="post" enctype = "multipart/form-data">
-
-            <button type="button" onclick="navigate()" class="btn get_summ_results">Referral Status</button> 
-
-            <script>
-              function navigate() {
-                window.location.href="reccomendations";
-              }
-            </script>
-
-            <button type="button" onclick="navigate()" class="btn get_summ_results">Your Account</button> 
-
-            <script>
-              function navigate() {
-                fetch('/reccomendations', {method: 'GET'})
-                .then(response => {
-                  window.location.href="home";
-                })
-              }
-            </script>
-
-            <button type="button" onclick="navigate()" class="btn get_summ_results">Get Client Reccommendations</button> 
-
-            <script>
-              function navigate() {
-                fetch('/reccomendations', {method: 'POST'})
-                .then(response => {
-                  window.location.href="reccomendations";
-                })
-              }
-            </script>
-
-            <!-- <button type="submit" value="Referral Status" class="btn get_summ_results">
-            <input type="submit" value="Your Account" class="btn get_summ_results">
-            <input type="submit" value="Get Client Reccommendations" class="btn get_summ_results"> -->
-          </form>
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
+          <h1>Get The Best Matches With Our Clients</h1>
+          <h2>Your One Stop Reccomendation Platform</h2>
+          <h2>Get Reccomendations, Earn Points, Refer</h2>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img">
+          <img src="../static/assets/img/hero-img.svg" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>

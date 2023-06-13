@@ -12,9 +12,6 @@ from sklearn.preprocessing import LabelEncoder
 
 from sklearn.cluster import KMeans
 
-# basePath="C:/Users/shafeekar.2018/hackathon/BestDealMatcher/src/cacheGenerator"
-# sys.path.append(basePath)
-
 sys.path.insert(0, os.path.abspath("../cacheGenerator"))
 import createCache 
 

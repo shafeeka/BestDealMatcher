@@ -53,35 +53,46 @@
           <!-- <h2>Upload Training File here</h2> -->
           <form action="/features_importance", method="post" enctype = "multipart/form-data">
 
-            <button type="button" onclick="navigate()" class="btn get_summ_results">Referral Status</button> 
+            <button type="button" onclick="navigate()" class="btn get_summ_results">Go Back</button> 
 
             <script>
               function navigate() {
-                window.location.href="reccomendations";
+                window.location.href="home";
               }
             </script>
 
-            <button type="button" onclick="navigate()" class="btn get_summ_results">Your Account</button> 
-
-            <script>
-              function navigate() {
-                fetch('/reccomendations', {method: 'GET'})
-                .then(response => {
-                  window.location.href="home";
-                })
-              }
-            </script>
-
-            <button type="button" onclick="navigate()" class="btn get_summ_results">Get Client Reccommendations</button> 
-
-            <script>
-              function navigate() {
-                fetch('/reccomendations', {method: 'POST'})
-                .then(response => {
-                  window.location.href="reccomendations";
-                })
-              }
-            </script>
+section id="results-table" class="d-flex align-items-center">
+<div class="container pt-3">
+    <h3 class="results">Results</h3>
+    <br>
+    Elasped time: {{ time_taken }}
+    <table border="1">
+        <tr>
+            <th>Your Suggested Clients</th>
+            <th class="text-center">Client Name</th>
+            <th class="text-center">Company</th>
+            <th class="text-center">Industry</th>
+            <th class="text-center">Region</th>
+            <th class="text-center">Years with Bank</th>
+        </tr>
+        <tr>
+            <td>XGBoost</td>
+            <td>{{ dfReturned[0] }}</td>
+            <td>wed</td>
+            <td>dw</td>
+            <td>dw</td>
+            <!-- <td>{{ accuracy_xgb }}</td>
+            <td>{{ metrics_xgb[0] }}</td>
+            <td>{{ metrics_xgb[1] }}</td>
+            <td>{{ metrics_xgb[2] }}</td> -->
+            <td>
+                <!-- <form class="table-form" action="/getRecco", method="post" enctype = "multipart/form-data">
+                    <input type = "file" name = "test_file">
+                    <input type="submit" value="Export">
+                </form> -->
+            </td>
+        </tr>
+      </table>
 
             <!-- <button type="submit" value="Referral Status" class="btn get_summ_results">
             <input type="submit" value="Your Account" class="btn get_summ_results">
