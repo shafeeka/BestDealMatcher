@@ -29,8 +29,9 @@ def getRecommendation():
     if request.method == "POST":
         try:
             name="Richard Roberts"
-            df = matchingModel.matchingModel(name)
-            return df
+            dfReturned = matchingModel.matchingModel(name)
+            # return df
+            return render_template("reccomendations.html", df=dfReturned)
         except:
             abort(400)
 
